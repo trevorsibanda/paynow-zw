@@ -1,0 +1,59 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.34.4.
+--
+-- see: https://github.com/sol/hpack
+
+name:           paynow-zw
+version:        0.1.0.0
+description:    Please see the README on GitHub at <https://github.com/trevorsibanda/paynow-zw#readme>
+homepage:       https://github.com/trevorsibanda/paynow-zw#readme
+bug-reports:    https://github.com/trevorsibanda/paynow-zw/issues
+author:         Trevor Sibanda
+maintainer:     sibandatrevor@gmail.com
+copyright:      2022 Trevor Sibanda
+license:        BSD3
+license-file:   LICENSE
+build-type:     Simple
+extra-source-files:
+    README.md
+    CHANGELOG.md
+
+source-repository head
+  type: git
+  location: https://github.com/trevorsibanda/paynow-zw
+
+library
+  exposed-modules:
+      Network.Payments.Paynow
+  other-modules:
+      Paths_paynow_zw
+  hs-source-dirs:
+      src
+  ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints
+  build-depends:
+      HTTP
+    , base >=4.7 && <5
+    , bytestring
+    , containers
+    , cryptohash
+    , http-conduit
+    , http-types
+    , text
+    , unliftio
+  default-language: Haskell2010
+
+test-suite paynow-zw-test
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  other-modules:
+      Paths_paynow_zw
+  hs-source-dirs:
+      test
+  ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      base >=4.7 && <5
+    , hspec
+    , paynow-zw
+    , unliftio
+  default-language: Haskell2010
