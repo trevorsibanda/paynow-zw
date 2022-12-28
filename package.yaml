@@ -2,6 +2,8 @@ name: paynow-zw
 version: 0.1.0.0
 github: "trevorsibanda/paynow-zw"
 license: BSD3
+category: payments
+synopsis: "A Haskell wrapper for the Paynow payment gateway"
 author: "Trevor Sibanda"
 maintainer: "sibandatrevor@gmail.com"
 copyright: "2022 Trevor Sibanda"

@@ -6,7 +6,9 @@ cabal-version: 1.12
 
 name:           paynow-zw
 version:        0.1.0.0
+synopsis:       A Haskell wrapper for the Paynow payment gateway
 description:    Please see the README on GitHub at <https://github.com/trevorsibanda/paynow-zw#readme>
+category:       payments
 homepage:       https://github.com/trevorsibanda/paynow-zw#readme
 bug-reports:    https://github.com/trevorsibanda/paynow-zw/issues
 author:         Trevor Sibanda
@@ -55,5 +57,5 @@ test-suite paynow-zw-test
       base >=4.7 && <5
     , hspec
     , paynow-zw
-    , unliftio >=0.2.22 && <0.3
+    , unliftio
   default-language: Haskell2010
